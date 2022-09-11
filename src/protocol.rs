@@ -9830,10 +9830,12 @@ pub mod cdp {
             pub session: bool,
             #[serde(skip_serializing_if = "Option::is_none")]
             pub same_site: Option<CookieSameSite>,
-            pub priority: CookiePriority,
+            #[serde(skip_serializing_if = "Option::is_none")]
+            pub priority: Option<CookiePriority>,
             #[serde(default)]
             pub same_party: bool,
-            pub source_scheme: CookieSourceScheme,
+            #[serde(skip_serializing_if = "Option::is_none")]
+            pub source_scheme: Option<CookieSourceScheme>,
             #[serde(default)]
             pub source_port: JsUInt,
             #[serde(skip_serializing_if = "Option::is_none")]
