@@ -13,6 +13,7 @@ readme = "README.md"
 websocket = { version = "0.23", default_features = false, features = ["sync"] }
 regex = "1"
 serde = { version = "1", features = ["derive"] }
+openssl = { version = "0.10.40", features = ["vendored"] }
 serde_json = "1"
 anyhow = '1'
 thiserror = '1'
